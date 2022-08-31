@@ -7,17 +7,15 @@
         Console.WriteLine("Введите символ");
         string symbol = Console.ReadLine();
         int sideSymbol = 2;
+        string symbolLine = string.Empty;
 
         for (int i = 0; i < name.Length + sideSymbol; i++)
         {
-            Console.Write(symbol);
+            symbolLine += symbol;
         }
 
-        Console.WriteLine($"\n{symbol}{name}{symbol}");
-
-        for (int i = 0; i < name.Length + sideSymbol; i++)
-        {
-            Console.Write(symbol);
-        }
+        Console.WriteLine(symbolLine);
+        Console.WriteLine($"{symbol}{name}{symbol}");
+        Console.WriteLine(symbolLine);        
     }
 }
